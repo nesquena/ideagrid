@@ -1,7 +1,21 @@
 IdeaGrid
 ==========
 
-Note: This project is a work in progress to showcase the power of Padrino and create a cool idea
+Note: This project is a work in progress to showcase the power of Padrino.
+
+Overview
+-------------
+
+I would like to build this out slowly but surely. Basically this will be a port of the existing (but incomplete) website at [IdeaGrid](http://ideagrid.org). The basic structure is as follows:
+
+* Users can post problems that exist in the world.
+* For each problem, users can propose solutions to these problems.
+* Users can vote on proposed solutions and the top ones will become projects.
+* For each project, users can add tasks to help work towards the project.
+* For each task, user can set parameters such as "frequency", "people needed", "type"
+* Users can then accept a task and help contribute towards the project's completion
+
+Checkout [IdeaGrid](http://ideagrid.org) for an incomplete execution of this idea. I want to port the existing functionality (creating problems, projects and tasks) over to this new application.
 
 Description
 -----------
