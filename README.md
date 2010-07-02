@@ -1,8 +1,10 @@
-= IdeaGrid
+IdeaGrid
+==========
 
 Note: This project is a work in progress to showcase the power of Padrino and create a cool idea
 
-== Description
+Description
+-----------
 
 A port of a cool idea by George Ruan. Basically a huge site for solving the world's problems through working together over the web.
 
@@ -17,7 +19,8 @@ An innovative community collaborating to provide solutions to local and global i
 
 Whether you change to using energy efficient light-bulbs or switch to a more fuel efficient car, your contributing to creating a greener environment.
 
-== Tools
+Tools
+-------
 
 This project uses Ruby and Git along with a number of other tools and frameworks:
 
