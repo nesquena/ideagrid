@@ -13,3 +13,13 @@ Problem.blueprint do
   title         { Sham.title }
   description   { Sham.body }
 end
+
+Account.blueprint do
+  username                { Sham.username }
+  first_name              { Sham.first_name }
+  last_name               { Sham.last_name }
+  email                   { Sham.email }
+  password                { 'testy' }
+  password_confirmation   { 'testy' }
+  role                    { 'admin' }
+end
