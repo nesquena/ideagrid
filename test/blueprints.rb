@@ -14,6 +14,11 @@ Problem.blueprint do
   description   { Sham.body }
 end
 
+Project.blueprint do
+  title         { Sham.title }
+  description   { Sham.body }
+end
+
 Account.blueprint do
   username                { Sham.username }
   first_name              { Sham.first_name }
