@@ -1,5 +1,6 @@
 PADRINO_ENV = 'test' unless defined?(PADRINO_ENV)
 require File.expand_path(File.dirname(__FILE__) + "/../config/boot")
+require File.join(File.dirname(__FILE__),'blueprints')
 require 'riot/rr'
 
 # Specify your app using the #app helper inside a context.

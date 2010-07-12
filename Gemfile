@@ -14,6 +14,10 @@ gem 'bson_ext', :require => "mongo"
 gem 'rr', :group => "test"
 gem 'riot', :group => "test"
 gem 'rack-test', :require => "rack/test", :group => "test"
+gem 'riot-mongo_mapper', :group => "test"
+gem 'machinist', :group => 'test'
+gem 'machinist_mongo', :require => 'machinist/mongo_mapper', :group => 'test'
+gem 'faker', :group => 'test'
 
 
 # Padrino
