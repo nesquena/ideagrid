@@ -127,10 +127,10 @@ GEM
     riot (0.11.2)
       rr
       term-ansicolor
-    riot-mongo_mapper (0.0.1)
+    riot-mongo_mapper (0.0.2)
       mongo_mapper (>= 0.8.2)
       riot (>= 0.11.2)
-    riot-mongo_mapper (0.0.1)
+    riot-mongo_mapper (0.0.2)
       mongo_mapper (>= 0.8.2)
       riot (>= 0.11.2)
     rr (0.10.11)
