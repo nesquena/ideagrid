@@ -19,6 +19,14 @@ Project.blueprint do
   description   { Sham.body }
 end
 
+Task.blueprint do
+  title         { Sham.title }
+  description   { Sham.body }
+  frequency     { "Every #{rand(30)} days" }
+  people_needed { rand(30) }
+  type          { Sham.tag_name }
+end
+
 Account.blueprint do
   username                { Sham.username }
   first_name              { Sham.first_name }
