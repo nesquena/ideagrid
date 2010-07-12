@@ -6,14 +6,15 @@ context "Account Model" do
   context 'definition' do
     setup { Account.make }
 
-    asserts_topic.has_key :first_name, String
-    asserts_topic.has_key :last_name, String
-    asserts_topic.has_key :username, String
-    asserts_topic.has_key :crypted_password, String
-    asserts_topic.has_key :email, String
-    asserts_topic.has_key :salt, String
-    asserts_topic.has_key :role, String
-
+    asserts_topic.has_key :first_name,        String
+    asserts_topic.has_key :last_name,         String
+    asserts_topic.has_key :username,          String
+    asserts_topic.has_key :crypted_password,  String
+    asserts_topic.has_key :email,             String
+    asserts_topic.has_key :salt,              String
+    asserts_topic.has_key :role,              String
+    asserts_topic.has_key :karma,             Integer, :default => 0
+    
     asserts_topic.responds_to :password
     asserts_topic.responds_to :password_confirmation
     
@@ -33,5 +34,20 @@ context "Account Model" do
     asserts_topic.has_validation :validates_format_of,        :email,    :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
     asserts_topic.has_validation :validates_format_of,        :role,     :with => /[A-Za-z]/
   end
+  
+  context "karma methods" do
+    setup { @account = Account.make :karma => 1 }
+    
+    context "add_karma" do
+      setup { @account.add_karma(10) ; @account }
+      asserts(:karma).equals 11
+    end
+    
+    context "sub_karma" do
+      setup { @account.sub_karma(1) ; @account }
+      asserts(:karma).equals 0
+    end
+  end
+  
   
 end

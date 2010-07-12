@@ -12,6 +12,7 @@ class Account
   key :crypted_password,      String
   key :salt,                  String
   key :role,                  String
+  key :karma,                 Integer, :default => 0
 
   # Validations
   validates_presence_of     :email, :role, :username
@@ -30,6 +31,17 @@ class Account
 
   # Callbacks
   before_save :generate_password
+
+
+  def add_karma(points=1)
+    self.karma += points
+    self.save
+  end
+
+  def sub_karma(points=1)
+    self.karma -= points
+    self.save
+  end
 
   ##
   # This method is for authentication purpose
