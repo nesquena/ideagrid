@@ -1,6 +1,8 @@
 IdeaGrid
 ==========
 
+We believe there's no problem too big for the human spirit.  No matter how monumental a problem is, it can be compartmentalized and solved by people with the passion to make a real difference.
+
 Note: This project is a work in progress to showcase the power of Padrino.
 
 Overview
@@ -36,8 +38,6 @@ Here is a proposal of the main features for Ideagrid.
  * Propose your solutions in the Ideas tab. 
  * Look for actionable tasks you can carry out in the Tasks tab. 
  * Look for like-minded people with the right skills in the People tab.
-
-We believe there's no problem too big for the human spirit.  No matter how monumental a problem is, it can be compartmentalized and solved by people with the passion to make a real difference.
 
 Tools
 -------
