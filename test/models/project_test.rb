@@ -4,7 +4,7 @@ context "Project Model" do
   setup { Project.delete_all }
   
   context "definition" do
-    setup { Project.make }
+    setup { Project }
     asserts_topic.has_key :title, String
     asserts_topic.has_key :description, String
   end

@@ -4,7 +4,7 @@ context "Task Model" do
   setup { Task.delete_all }
   
   context "definition" do
-    setup { Task.make }
+    setup { Task }
     
     asserts_topic.has_key :title,         String
     asserts_topic.has_key :description,   String
