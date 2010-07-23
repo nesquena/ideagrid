@@ -14,24 +14,14 @@ class Riot::Situation
 
   # The Rack app under test.
   def app
-    defined?(@app) ? @app : build_app
+    IdeaGrid.tap { |app| }
   end
 
-  private
-
-  def build_app
-    config_file = File.read(find_config_file)
-    Rack::Builder.new { instance_eval(config_file) }.to_app
-  end
-
-  def find_config_file
-    if Dir.glob("config.ru").length > 0
-      File.join(Dir.pwd,"config.ru")
-    elsif Dir.pwd != "/"
-      Dir.chdir("..") { find_config_file }
-    else
-      raise "Cannot find config.ru"
-    end
+  def mock_model(&block)
+    mock = Class.new
+    mock.class_eval { include MongoMapper::Document }
+    mock.class_eval(&block)
+    mock
   end
 end
 
@@ -46,5 +36,6 @@ class Riot::Context
   def app(app=nil, &block)
     setup { @app = (app || block) }
   end
+  
 end
 
