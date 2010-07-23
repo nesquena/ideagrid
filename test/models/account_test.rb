@@ -4,8 +4,11 @@ context "Account Model" do
   setup { Account.delete_all }
   
   context 'definition' do
-    setup { Account.make }
-
+    setup { Account }
+    
+    asserts_topic.has_plugin Plugins::Karma
+    asserts_topic.has_plugin Plugins::Authentication
+    
     asserts_topic.has_key :first_name,        String
     asserts_topic.has_key :last_name,         String
     asserts_topic.has_key :username,          String

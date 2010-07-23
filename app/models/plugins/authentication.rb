@@ -25,6 +25,7 @@ module Plugins
 
     module ClassMethods
       attr_accessor :password
+      attr_accessor :password_confirmation
     end
 
     module InstanceMethods
